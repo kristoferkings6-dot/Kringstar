@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: From ₦0 to ₦8.5M in 30 Days - Kringstar AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1A1F3A;
+            background: white;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0066FF 0%, #0A0E27 100%);
+            color: white;
+            padding: 60px 40px;
+        }
+
+        .cover-badge {
+            background: #FFD700;
+            color: #0A0E27;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .cover-title {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .cover-subtitle {
+            font-size: 1.8rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .cover-stats {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .cover-stat {
+            text-align: center;
+        }
+
+        .cover-stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .cover-stat-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0066FF;
+            margin-bottom: 30px;
+            margin-top: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0066FF;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #1A1F3A;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .quote {
+            background: #f8f9fa;
+            border-left: 5px solid #0066FF;
+            padding: 30px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        .quote-author {
+            font-style: normal;
+            font-weight: 700;
+            color: #0066FF;
+            margin-top: 15px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .highlight-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0066FF;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .before-card, .after-card {
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .before-card {
+            background: #fff5f5;
+            border: 2px solid #ff6b6b;
+        }
+
+        .before-card h3 {
+            color: #ff6b6b;
+        }
+
+        .after-card {
+            background: #f0fff4;
+            border: 2px solid #51cf66;
+        }
+
+        .after-card h3 {
+            color: #51cf66;
+        }
+
+        .timeline {
+            margin: 40px 0;
+        }
+
+        .timeline-item {
+            padding-left: 40px;
+            border-left: 3px solid #0066FF;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #0066FF;
+            border-radius: 50%;
+            position: absolute;
+            left: -12px;
+            top: 5px;
+        }
+
+        .timeline-item h4 {
+            color: #0066FF;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .result-box {
+            background: #fffbeb;
+            border: 3px solid #FFD700;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .result-box h2 {
+            color: #0066FF;
+            font-size: 2.5rem;
+            margin: 0 0 20px 0;
+        }
+
+        .result-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #0066FF;
+            margin: 20px 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0066FF 0%, #0A0E27 100%);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FFD700;
+            color: #0A0E27;
+            padding: 20px 50px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            border-top: 2px solid #e9ecef;
+            margin-top: 60px;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        @media print {
+            .page {
+                max-width: 100%;
+                padding: 40px;
+            }
+            
+            .cover-page {
+                page-break-after: always;
+            }
+            
+            h1, h2 {
+                page-break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cover-title {
+                font-size: 2.5rem;
+            }
+            
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <div class="cover-badge">📊 CASE STUDY</div>
+        <h1 class="cover-title">From ₦0 to ₦8.5M<br>in 30 Days</h1>
+        <p class="cover-subtitle">
+            How a Lagos real estate agent went from broke and desperate 
+            to closing 3 deals in his first month with Kringstar AI
+        </p>
+        
+        <div class="cover-stats">
+            <div class="cover-stat">
+                <div class="cover-stat-number">₦8.5M</div>
+                <div class="cover-stat-label">First Month Revenue</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-number">18</div>
+                <div class="cover-stat-label">Qualified Appointments</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-number">11.8X</div>
+                <div class="cover-stat-label">ROI</div>
+            </div>
+        </div>
+        
+        <p style="margin-top: 80px; opacity: 0.7;">© 2025 Kringstar AI</p>
+    </div>
+
+    <!-- PAGE 1: THE SITUATION -->
+    <div class="page">
+        <h1>Chapter 1: The Situation (Before)</h1>
+        
+        <h2>Meet Tunde Coker</h2>
+        <ul>
+            <li>3 years as independent real estate agent in Lagos</li>
+            <li>Specializes in Lekki Phase 1 & Ajah properties</li>
+            <li>₦30M-₦80M price range</li>
+        </ul>
+
+        <h2>His Broken System (January 2025)</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-label">Monthly Ad Spend</div>
+                <div class="stat-value">₦350K</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Raw Leads</div>
+                <div class="stat-value">35</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Actual Conversations</div>
+                <div class="stat-value">12</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Booked Appointments</div>
+                <div class="stat-value">4</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Show Rate</div>
+                <div class="stat-value">25%</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Deals Closed</div>
+                <div class="stat-value" style="color: #ff6b6b;">0</div>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <h2>Monthly Revenue</h2>
+            <div class="result-number" style="color: #ff6b6b;">₦0</div>
+            <p>Hours spent on lead gen: 25 hours/week</p>
+        </div>
+
+        <div class="quote">
+            "I was exhausted. I'd call 50 people and maybe 5 would answer. Of those 5, only 1 was serious. 
+            I was working harder than ever but making less money. My wife was worried. I was ready to quit 
+            real estate and get a 9-5 job."
+            <div class="quote-author">— Tunde Coker</div>
+        </div>
+
+        <h3>The Breaking Point</h3>
+        <p>
+            January rent was due. Tunde had ₦0 in commissions from December. He knew something had to change.
+        </p>
+    </div>
+
+    <!-- PAGE 2: THE DISCOVERY -->
+    <div class="page">
+        <h1>Chapter 2: The Discovery</h1>
+
+        <h2>How Tunde Found Kringstar AI</h2>
+        <p>
+            One night at 2am (couldn't sleep, worried about money), Tunde was scrolling Instagram. 
+            He saw an ad: <em>"Lagos agents: Stop chasing time-wasters. Get 15-20 qualified appointments monthly."</em>
+        </p>
+
+        <p>Normally, he'd scroll past. But this time, something made him click.</p>
+
+        <h3>The Calculator</h3>
+        <p>
+            He took the "Lead Gen ROI Calculator" and discovered he was losing <strong>₦2.8M monthly</strong> 
+            in potential commissions.
+        </p>
+        <p>That number hit him like a punch.</p>
+
+        <h3>The Call</h3>
+        <p>
+            The next day, he WhatsApp'd +234 903 766 8075. Within 2 hours, he was on a call with our team.
+        </p>
+
+        <h3>The Offer</h3>
+        <div class="highlight-box">
+            <h3>The Performance Pilot</h3>
+            <p>"Pay per result. We cover the ad spend. 
+            If we book 0 appointments, you pay ₦0."</p>
+            <p><strong>Zero risk. All upside.</strong></p>
+        </div>
+
+        <h3>The Decision</h3>
+        <p>
+            Tunde had ₦320K left in his business account. He figured: <em>"If they book me 8 appointments 
+            and even 2 show up, that's only ₦80K. I waste more than that on PropertyPro every month."</em>
+        </p>
+        <p><strong>He said yes.</strong></p>
+    </div>
+
+    <!-- PAGE 3: THE SYSTEM -->
+    <div class="page">
+        <h1>Chapter 3: The System (What We Did)</h1>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>Week 1: Setup (Day 1-2)</h4>
+                <p><strong>Onboarding:</strong></p>
+                <ul>
+                    <li>Deep-dive call: What properties? Ideal client? Common objections?</li>
+                    <li>Set up tracking: Google Calendar, WhatsApp, CRM connected</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h4>Day 3-4: Campaign Launch</h4>
+                <p><strong>Created Facebook ads targeting:</strong></p>
+                <ul>
+                    <li>UK/US Nigerians looking to invest in Lagos</li>
+                    <li>Lagos professionals aged 30-45 (recently promoted)</li>
+                    <li>Married couples (outgrowing 2-bedroom apartments)</li>
+                </ul>
+                <p><strong>Ad spend:</strong> ₦100K/week<br>
+                <strong>Headline:</strong> "Find Your Dream Home in Lekki - ₦30M-₦80M"</p>
+            </div>
+
+            <div class="timeline-item">
+                <h4>Day 5-7: First Leads</h4>
+                <ul>
+                    <li>18 people filled out the lead form</li>
+                    <li>We called all 18 within 5 minutes</li>
+                    <li>Qualified 9 using our 5-Step System</li>
+                    <li><strong>Booked 6 appointments on Tunde's calendar</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Tunde's First Appointment: February 5th, 10am</h3>
+        <div class="highlight-box">
+            <p><strong>Name:</strong> Ngozi Adeyemi<br>
+            <strong>Budget:</strong> ₦65M<br>
+            <strong>Timeline:</strong> 2 months<br>
+            <strong>Pre-qualified:</strong> Yes (₦35M down payment ready, mortgage approved for ₦30M)</p>
+        </div>
+
+        <div class="quote">
+            "When I logged into my calendar on Monday morning and saw 6 appointments already booked for the week, 
+            I almost cried. I'd never had that many qualified meetings in a YEAR, let alone a week."
+            <div class="quote-author">— Tunde</div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: THE RESULTS -->
+    <div class="page">
+        <h1>Chapter 4: The Results (Week 2-4)</h1>
+
+        <h2>Week 2: First Appointments</h2>
+        <ul>
+            <li>6 appointments booked</li>
+            <li>5 showed up (<strong>83% show rate!</strong>)</li>
+            <li>Tunde presented properties to all 5</li>
+            <li>2 wanted to view in person</li>
+            <li>1 (Ngozi) made an offer on a ₦60M property in Lekki Phase 1</li>
+        </ul>
+
+        <h2>Week 3: More Pipeline</h2>
+        <ul>
+            <li>7 more appointments booked</li>
+            <li>5 showed up (71% show rate)</li>
+            <li>1 more wanted to view</li>
+            <li>Follow-up with Ngozi: <strong>Offer accepted! Deal closing in 10 days.</strong></li>
+        </ul>
+
+        <h2>Week 4: Closing Time</h2>
+        <ul>
+            <li>5 more appointments</li>
+            <li>3 showed up</li>
+        </ul>
+
+        <div class="result-box">
+            <h2>DEALS CLOSED</h2>
+            <div style="margin: 30px 0;">
+                <p><strong>Deal #1:</strong> Ngozi - ₦60M property, 5% commission = <span style="color: #51cf66; font-size: 2rem; font-weight: 900;">₦3M</span></p>
+                <p><strong>Deal #2:</strong> Chidi - ₦45M property, 5% commission = <span style="color: #51cf66; font-size: 2rem; font-weight: 900;">₦2.25M</span></p>
+                <p><strong>Deal #3:</strong> Kemi - ₦65M property, 5% commission = <span style="color: #51cf66; font-size: 2rem; font-weight: 900;">₦3.25M</span></p>
+            </div>
+            <h2 style="margin-top: 40px;">Total Revenue (Month 1)</h2>
+            <div class="result-number" style="color: #51cf66;">₦8.5M</div>
+        </div>
+    </div>
+
+    <!-- PAGE 5: THE BREAKDOWN -->
+    <div class="page">
+        <h1>Chapter 5: The Breakdown (The Numbers)</h1>
+
+        <h2>Tunde's Investment</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-label">Kringstar AI Performance Pilot</div>
+                <div class="stat-value">₦720K</div>
+                <p style="margin-top: 10px; color: #6c757d; font-size: 0.9rem;">Performance-based pricing</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Ad Spend (We Covered)</div>
+                <div class="stat-value">₦400K</div>
+                <p style="margin-top: 10px; color: #6c757d; font-size: 0.9rem;">Included in package</p>
+            </div>
+        </div>
+
+        <h2>Tunde's Return</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-label">Deals Closed</div>
+                <div class="stat-value">3</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Total Commissions</div>
+                <div class="stat-value" style="color: #51cf66;">₦8.5M</div>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <h2>ROI</h2>
+            <div class="result-number">11.8X</div>
+            <p style="font-size: 1.2rem;">₦720K invested → ₦8.5M earned</p>
+        </div>
+
+        <h2>Time Saved</h2>
+        <div class="before-after">
+            <div class="before-card">
+                <h3>Before</h3>
+                <p><strong>25 hours/week</strong> on lead gen</p>
+                <p>= <strong>100 hours/month</strong></p>
+            </div>
+            <div class="after-card">
+                <h3>After</h3>
+                <p><strong>0 hours</strong> (we handled everything)</p>
+                <p>= <strong>100 hours saved</strong></p>
+            </div>
+        </div>
+
+        <p><strong>Value of time saved:</strong> ₦850K (₦8.5K/hour × 100 hours)</p>
+
+        <h3>What Changed</h3>
+        <ul>
+            <li>Spent ₦370K MORE (₦720K vs ₦350K)</li>
+            <li>But made <strong>₦8.5M instead of ₦0</strong></li>
+            <li>And got <strong>100 hours of his life back</strong></li>
+        </ul>
+    </div>
+
+    <!-- PAGE 6: WHAT TUNDE SAYS NOW -->
+    <div class="page">
+        <h1>Chapter 6: What Tunde Says Now</h1>
+
+        <h2 style="color: #51cf66;">"This saved my career. I'm not exaggerating."</h2>
+
+        <div class="quote">
+            In January, I was broke and depressed. My wife was asking if we should move back to Ibadan. 
+            I felt like a failure.
+            <br><br>
+            By end of February, I'd made ₦8.5M. Paid 3 months rent in advance. Bought my wife a gift. 
+            Put money in savings.
+            <br><br>
+            But more than the money, I got my life back. I'm not spending 6 hours a day calling people 
+            who don't answer. I'm not showing properties to people who "need to think about it" for 3 months.
+            <br><br>
+            I show up to 3-4 appointments per week. They're all qualified. They all have money. 
+            Half of them close.
+            <br><br>
+            That's it. That's the job now.
+            <br><br>
+            If you're struggling like I was, just try it. The Performance Pilot has zero risk. 
+            Worst case, you're in the same position you're in now. Best case, you make ₦5M-₦10M this month.
+            <br><br>
+            I picked best case. You should too.
+            <div class="quote-author">— Tunde Coker, Lagos Real Estate Agent</div>
+        </div>
+
+        <h2>Update (March 2025)</h2>
+        <p>Tunde upgraded to the Growth Package (₦700K/month, includes ad spend).</p>
+        <p>He's now averaging 18-20 appointments per month and closing 3-4 deals consistently.</p>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-label">February Revenue</div>
+                <div class="stat-value" style="color: #51cf66;">₦8.5M</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">March Revenue</div>
+                <div class="stat-value" style="color: #51cf66;">₦11.2M</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">April Projection</div>
+                <div class="stat-value" style="color: #51cf66;">₦12M+</div>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; font-size: 2rem; margin-top: 60px;">He's never going back.</h3>
+    </div>
+
+    <!-- PAGE 7: KEY LESSONS -->
+    <div class="page">
+        <h1>Chapter 7: The 3 Key Lessons</h1>
+
+        <div class="highlight-box">
+            <h3>Lesson #1: Leads ≠ Appointments</h3>
+            <p>Most agents pay for "leads" (name + phone number). But leads are worthless if they don't show up.</p>
+            <p><strong>Pay for appointments that show up instead.</strong></p>
+        </div>
+
+        <div class="highlight-box" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #0A0E27;">
+            <h3 style="color: #0A0E27;">Lesson #2: Time is Money</h3>
+            <p>100 hours/month prospecting = ₦850K+ in lost opportunity cost.</p>
+            <p><strong>You're a closer, not a prospector. Stay in your zone of genius.</strong></p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Lesson #3: Zero Risk > Zero Action</h3>
+            <p>The Performance Pilot costs ₦0 if we don't deliver. Most agents stay stuck because 
+            they're afraid to try something new.</p>
+            <p><strong>Tunde almost didn't click that ad. He's glad he did.</strong></p>
+        </div>
+    </div>
+
+    <!-- PAGE 8: YOUR TURN -->
+    <div class="page">
+        <h1>Chapter 8: Your Turn</h1>
+
+        <h2>Could this work for you?</h2>
+
+        <p>If you're a Lagos/Abuja real estate agent who:</p>
+        <ul>
+            <li>✅ Closes properties in the ₦30M-₦100M range</li>
+            <li>✅ Currently spending ₦200K+ on lead gen</li>
+            <li>✅ Getting inconsistent results</li>
+            <li>✅ Wants predictable income</li>
+        </ul>
+
+        <p style="font-size: 1.5rem; font-weight: 700; margin: 40px 0;">
+            Then yes, this will work for you.
+        </p>
+
+        <div class="cta-section">
+            <h2>Here's what to do next:</h2>
+            
+            <h3 style="color: white; margin-top: 40px;">Option 1: Try the Performance Pilot</h3>
+            <p>• Pay per result - performance-based pricing<br>
+            • We cover the ad spend<br>
+            • Get your first 3 appointments within 7 days</p>
+            
+            <h3 style="color: white; margin-top: 40px;">Option 2: Book a Free Strategy Call</h3>
+            <p>• 15 minutes with our team<br>
+            • We'll audit your current lead gen<br>
+            • Show you exactly how we'd get you 18+ appointments/month<br>
+            • No pressure, no obligation</p>
+            
+            <h3 style="color: white; margin-top: 40px;">Option 3: WhatsApp Us</h3>
+            <p>• +234 903 766 8075<br>
+            • Ask any questions<br>
+            • We respond in 5 minutes</p>
+            
+            <div style="margin-top: 60px;">
+                <a href="https://kringstarltd.github.io/Web/" class="cta-button">
+                    Visit Our Website
+                </a>
+                <a href="https://wa.me/2349037668075" class="cta-button">
+                    WhatsApp Us Now
+                </a>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin-top: 80px;">Don't wait another month wondering "what if."</h2>
+        <p style="text-align: center; font-size: 1.3rem;">
+            Tunde didn't. And he made ₦8.5M because of it.
+        </p>
+        <h3 style="text-align: center; font-size: 2rem; color: #0066FF; margin-top: 40px;">
+            What will YOU make?
+        </h3>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p style="font-size: 1.5rem; font-weight: 700; color: #0066FF; margin-bottom: 20px;">
+            Kringstar AI
+        </p>
+        <p>Premium Real Estate Appointment Setting</p>
+        <p>Helping Nigerian agents close more deals with less stress</p>
+        <p style="margin-top: 30px;">
+            📱 WhatsApp: +234 903 766 8075<br>
+            📧 Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f79c859e8483989192859c9e999084c1b7909a969e9bd994989a">[email&#160;protected]</a><br>
+            🌐 Website: kringstarltd.github.io/Web
+        </p>
