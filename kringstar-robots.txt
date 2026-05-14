@@ -1,0 +1,16 @@
+# robots.txt for Kringstar AI
+# This file tells search engines which pages they can and cannot crawl
+
+# Allow all search engines to crawl your entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of unnecessary directories (optional)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Specify the location of your sitemap
+Sitemap: https://kristoferkings6-dot.github.io/Kringstar/sitemap.xml
+
+# Crawl delay (optional - tells bots to wait between requests)
+# Crawl-delay: 1
